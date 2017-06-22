@@ -13,14 +13,13 @@ mongoose.connect(mongoDB);
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
 var Schema = mongoose.Schema;
 
 var schema = new Schema({
     id:                 String,
     name:               String,
     api_version:        String,
-    web_version:        String,
+    release_version:        String,
     intermine_version:       String,
     created_at:         Date,
     last_time_updated:  Date,
